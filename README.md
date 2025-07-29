@@ -1,18 +1,24 @@
-## Getting Started
+## Developing A 'Barking Dog' Program For Boolean Logic Familiarity
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+We have a dog that likes to bark.  We need to wake up if the dog is barking at night!
 
-## Folder Structure
+Write a method shouldWakeUp that has 2 parameters.
 
-The workspace contains two folders by default, where:
+1st parameter should be of type boolean and be named barking it represents if our dog is currently barking.
+2nd parameter represents the hour of the day and is of type int with the name hourOfDay and has a valid range of 0-23.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+We have to wake up if the dog is barking before 8 or after 22 hours so in that case return true.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+In all other cases return false.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+If the hourOfDay parameter is less than 0 or greater than 23 return false.
 
-## Dependency Management
+## Examples
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- shouldWakeUp (true, 1); → should return true
+
+- shouldWakeUp (false, 2); → should return false since the dog is not barking.
+
+- shouldWakeUp (true, 8); → should return false, since it's not before 8.
+
+- shouldWakeUp (true, -1); → should return false since the hourOfDay parameter needs to be in a range 0-23.
